@@ -1,0 +1,2 @@
+Illuminate\Support\Facades\Redis::connection()->ping();
+echo config('database.connections.mysql.host');
