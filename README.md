@@ -94,7 +94,7 @@
 
 ### 1️⃣ Клонирование репозитория
 
-```bash
+
 git clone https://github.com/savckovalexei/cbr-currency-widget.git
 cd cbr-currency-widget
 
