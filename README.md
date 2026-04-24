@@ -90,6 +90,8 @@
 ### 1️⃣ Клонирование репозитория
 
 `git clone https://github.com/savckovalexei/cbr-currency-widget.git`
+
+
 `cd cbr-currency-widget`
 
 ### 2️⃣ Настройка окружения
