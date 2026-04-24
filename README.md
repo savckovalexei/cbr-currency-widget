@@ -89,8 +89,8 @@
 ## 🚀 Быстрый старт
 ### 1️⃣ Клонирование репозитория
 
-`git clone https://github.com/savckovalexei/cbr-currency-widget.git
-cd cbr-currency-widget`
+`git clone https://github.com/savckovalexei/cbr-currency-widget.git`
+`cd cbr-currency-widget`
 
 ### 2️⃣ Настройка окружения
 
@@ -100,15 +100,23 @@ cd cbr-currency-widget`
 #### Для Windows:
 #### copy .env.example .env
 **Важно: проверьте содержимое .env, особенно:**
+
 DB_HOST=mysql          # Имя сервиса MySQL в Docker
+
 DB_DATABASE=cbr_currencies
+
 DB_USERNAME=root
+
 DB_PASSWORD=root_password
 
+
 REDIS_HOST=redis       # Имя сервиса Redis в Docker
+
 REDIS_CLIENT=predis
 
+
 CACHE_DRIVER=redis
+
 APP_TIMEZONE=Europe/Moscow
 
 ### 3️⃣ Запуск Docker-контейнеров
@@ -132,7 +140,10 @@ cbr_redis — Кэш
 cbr_phpmyadmin — Админка БД
 
 ### 4️⃣ Инициализация приложения
-
+#### Установка зависимостей
+`docker-compose exec -u root app composer install --no-dev --no-interaction`
+#### Дайте права
+`docker-compose exec -u root app chown -R www-data:www-data /var/www/vendor`
 #### Генерация ключа приложения
 `docker-compose exec app php artisan key:generate`
 
